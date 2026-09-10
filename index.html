@@ -1,81 +1,15 @@
+Warning: truncated output (original token count: 3269)
+Total output lines: 101
+
 <!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>给王振华的一封情书</title>
-  <meta name="description" content="一封只属于王振华的星光情书。">
-  <style>
-    :root { --ink: #fff9ef; --night: #101a38; --pink: #ff9ba8; --gold: #ffd991; }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--night); color: var(--ink); font-family: Arial, "Microsoft YaHei", sans-serif; }
-    button { font: inherit; }
-    .love-page { min-height: 100vh; overflow: hidden; position: relative; background: radial-gradient(circle at 78% 28%, #293d71 0, transparent 31rem), linear-gradient(126deg, #121b3c 0%, #1c2855 58%, #172144 100%); }
-    .topbar, .hero, .love-note { position: relative; z-index: 1; max-width: 1120px; margin: auto; }
-    .topbar { display: flex; align-items: center; justify-content: space-between; padding: 26px 32px; font-size: .88rem; letter-spacing: .08em; }
-    .brand { margin: 0; display: flex; align-items: center; gap: 8px; font-weight: 700; color: #ffe6b2; }
-    .date { opacity: .7; margin: 0; }
-    .hero { min-height: 560px; padding: 60px 32px 90px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 64px; }
-    .eyebrow { margin: 0 0 16px; display: flex; align-items: center; gap: 7px; font-size: .74rem; font-weight: 700; letter-spacing: .18em; color: var(--gold); }
-    h1 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: clamp(3.1rem, 6.2vw, 5.8rem); font-weight: 500; line-height: 1.12; letter-spacing: -.04em; }
-    .lead { max-width: 445px; margin: 28px 0; font-size: 1.08rem; line-height: 1.9; color: #dfe6ff; }
-    .letter-button { display: inline-flex; gap: 9px; align-items: center; padding: 14px 21px; border: 0; border-radius: 999px; background: #ffe4ad; color: #442c35; font-weight: 700; cursor: pointer; box-shadow: 0 12px 28px #0003; transition: transform .2s, box-shadow .2s; }
-    .letter-button:hover { transform: translateY(-3px) rotate(-1deg); box-shadow: 0 17px 35px #0005; }
-    .art-wrap { position: relative; }
-    .art-wrap img { width: 100%; display: block; border: 1px solid #fff5d144; border-radius: 28px; box-shadow: 24px 24px 0 #ff9baa17, 0 24px 65px #0007; }
-    .art-note { position: absolute; right: -28px; bottom: -28px; padding: 17px 20px; border-radius: 4px 20px 4px 20px; background: #ffead0; color: #593c45; font-family: Georgia, "KaiTi", serif; font-size: 1.03rem; line-height: 1.65; transform: rotate(-4deg); box-shadow: 0 12px 30px #0004; }
-    .love-note { margin-bottom: 50px; padding: 28px 32px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 24px; border: 1px solid #fff3ca38; border-radius: 23px; background: #fff9ee0d; backdrop-filter: blur(8px); }
-    .note-mark { color: #ffc6c9; font: 4rem/1 Georgia, serif; }
-    .love-note h2 { margin: 0 0 8px; font-size: 1.1rem; font-weight: 700; }
-    .reason { margin: 0; color: #e4eaff; font-size: 1rem; }
-    .next-reason { color: #ffe0a1; background: transparent; border: 1px solid #ffe0a17a; border-radius: 999px; padding: 9px 14px; cursor: pointer; }
-    .next-reason span { margin-left: 7px; font-size: 1.2rem; }
-    .stars { position: absolute; top: 115px; left: 8%; color: #ffe6a4; opacity: .6; letter-spacing: .45rem; animation: twinkle 3s ease-in-out infinite alternate; }
-    .orb { position: absolute; border-radius: 999px; filter: blur(1px); opacity: .42; }
-    .orb-one { width: 280px; height: 280px; background: #f293b0; left: -130px; bottom: 40px; }
-    .orb-two { width: 220px; height: 220px; background: #6a78cf; right: -80px; top: 100px; }
-    .modal-backdrop { position: fixed; inset: 0; z-index: 5; display: grid; place-items: center; padding: 24px; background: #071025bf; backdrop-filter: blur(8px); }
-    .letter { position: relative; max-width: 580px; padding: 50px; border-radius: 8px 30px 8px 30px; background: #fff5e3; color: #41303c; box-shadow: 0 24px 80px #0008; animation: appear .25s ease-out; }
-    .letter h2 { margin: 0 0 20px; font: 2rem Georgia, "KaiTi", serif; }
-    .letter p:not(.eyebrow) { font-family: Georgia, "KaiTi", serif; font-size: 1.08rem; line-height: 1.95; }
-    .letter .eyebrow { color: #b86576; }
-    .signature { margin-top: 24px; text-align: right; }
-    .signature span { color: #e0697a; font-size: 1.5rem; }
-    .close { position: absolute; top: 13px; right: 18px; border: 0; background: none; color: #795967; cursor: pointer; font-size: 2rem; }
-    @keyframes appear { from { opacity: 0; transform: translateY(12px) rotate(-1deg); } to { opacity: 1; transform: none; } }
-    @keyframes twinkle { to { opacity: 1; transform: translateY(-4px); } }
-    @media (max-width: 720px) { .topbar { padding: 20px; } .date { display: none; } .hero { grid-template-columns: 1fr; min-height: auto; padding: 48px 22px 70px; gap: 45px; } .art-wrap { max-width: 500px; } .art-note { right: -6px; bottom: -22px; font-size: .9rem; } .love-note { margin: 0 20px 30px; padding: 22px; grid-template-columns: auto 1fr; } .next-reason { grid-column: 2; justify-self: start; } .note-mark { font-size: 3.2rem; } .letter { padding: 42px 28px 30px; } }
-  </style>
-</head>
-<body>
-  <main class="love-page">
-    <div class="orb orb-one"></div><div class="orb orb-two"></div>
-    <div class="stars" aria-hidden="true">✦　·　✧　·　✦　　✧　·　✦</div>
-    <nav class="topbar"><p class="brand">♥ 给王振华</p><p class="date">一封只属于你的情书</p></nav>
-    <section class="hero">
-      <div class="copy"><p class="eyebrow">✦ FROM MY HEART</p><h1>王振华，<br>我想一直陪着你。</h1><p class="lead">不是一时兴起的喜欢，是每次想起你，心里都会亮起一盏小灯。</p><button class="letter-button" type="button">✦ 打开这封信</button></div>
-      <div class="art-wrap"><img src="/love-letter-hero.png" alt="星空下的信封与鲜花"><div class="art-note">愿我们把日子过成<br><strong>很多很多个小幸福</strong></div></div>
-    </section>
-    <section class="love-note" aria-labelledby="note-title"><div class="note-mark">♡</div><div><p class="eyebrow">A LITTLE REMINDER</p><h2 id="note-title">喜欢你的理由，今天是第 <span id="reason-number">1</span> 条</h2><p class="reason" id="reason-text">因为有你，普通的一天也会变得闪闪发亮。</p></div><button class="next-reason" type="button" aria-label="换一句喜欢你的理由">换一句 <span>→</span></button></section>
-  </main>
-  <template id="letter-template"><div class="modal-backdrop" role="presentation"><section class="letter" role="dialog" aria-modal="true" aria-labelledby="letter-title"><button class="close" type="button" aria-label="关闭信件">×</button><p class="eyebrow">TO WANG ZHENHUA</p><h2 id="letter-title">亲爱的王振华：</h2><p>谢谢你来到我的生活里。和你在一起之后，我开始更期待每一个明天，也更珍惜那些平凡的小事。</p><p>我希望你开心的时候有人分享，难过的时候有人陪伴；希望以后每一次回头，都能看到我在你身边。</p><p class="signature">我喜欢你。<br>也想和你慢慢来，慢慢爱。<br><span>♡</span></p></section></div></template>
-  <script>
-    (() => {
-      const reasons = ['因为有你，普通的一天也会变得闪闪发亮。', '因为你笑起来的时候，我总觉得世界很温柔。', '因为你是王振华，也是我认真喜欢着的人。'];
-      let index = 0;
-      document.querySelector('.next-reason').addEventListener('click', () => {
-        index = (index + 1) % reasons.length;
-        document.querySelector('#reason-number').textContent = index + 1;
-        document.querySelector('#reason-text').textContent = reasons[index];
-      });
-      document.querySelector('.letter-button').addEventListener('click', () => {
-        const modal = document.querySelector('#letter-template').content.firstElementChild.cloneNode(true);
-        const close = () => modal.remove();
-        modal.querySelector('.close').addEventListener('click', close);
-        modal.addEventListener('click', event => { if (event.target === modal) close(); });
-        document.body.appendChild(modal);
-      });
+  <meta name="de…3169 tokens truncated…hIndex + 1) % wishes.length; document.querySelector('#wish-text').textContent = wishes[wishIndex]; showToast('这一颗星，也想落在你的心上。'); });
     })();
   </script>
 </body>
 </html>
+
