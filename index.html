@@ -37,7 +37,8 @@
     .moment { min-height: 180px; padding: 23px; color: #fff9ef; text-align: left; border: 1px solid #fff3ca38; border-radius: 21px; background: linear-gradient(145deg, #ffffff17, #fff0c908); cursor: pointer; transition: transform .2s, background .2s; }
     .moment:hover, .moment:focus-visible { transform: translateY(-5px); background: #ffffff1c; outline: 2px solid #ffd991; outline-offset: 3px; }
     .moment-icon { display: block; margin-bottom: 30px; color: #ffc7ce; font-size: 1.55rem; }.moment strong { display: block; margin-bottom: 8px; font-size: 1rem; }.moment small { color: #dce5ff; line-height: 1.65; font-size: .9rem; }
-    .wish-section { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; padding-bottom: 66px; }.wish-box { padding: 28px; border-radius: 24px; background: #ffe9bd; color: #49323c; box-shadow: 0 18px 42px #0004; }.wish-box p { margin: 0 0 9px; font: 1.22rem/1.65 Georgia, "KaiTi", serif; }.wish-box span { color: #9d5d6d; font-size: .88rem; }.wish-button { align-self: center; padding: 13px 19px; color: #ffe5ad; background: transparent; border: 1px solid #ffe5ad86; border-radius: 999px; cursor: pointer; }.wish-button:hover { background: #ffffff14; }
+    .wish-section { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; padding-bottom: 36px; }.wish-box { padding: 28px; border-radius: 24px; background: #ffe9bd; color: #49323c; box-shadow: 0 18px 42px #0004; }.wish-box p { margin: 0 0 9px; font: 1.22rem/1.65 Georgia, "KaiTi", serif; }.wish-box span { color: #9d5d6d; font-size: .88rem; }.wish-button { align-self: center; padding: 13px 19px; color: #ffe5ad; background: transparent; border: 1px solid #ffe5ad86; border-radius: 999px; cursor: pointer; }.wish-button:hover { background: #ffffff14; }
+    .calendar { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 0 32px 74px; }.calendar-shell { padding: 28px; border: 1px solid #fff3ca3d; border-radius: 28px; background: linear-gradient(135deg, #fff8e811, #ffc7ce0b); box-shadow: 0 22px 52px #0003; }.calendar-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 23px; }.calendar-head .section-title { margin-bottom: 0; }.calendar-tag { margin: 0; color: #dce5ff; font-size: .9rem; line-height: 1.65; }.count-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 22px; }.count-card { padding: 20px; border: 1px solid #fff2d538; border-radius: 18px; background: #07122b38; }.count-card span { display: block; margin-bottom: 7px; color: #ffe0a1; font-size: .78rem; letter-spacing: .1em; }.count-card strong { display: block; color: #fff6df; font: 2rem/1 Georgia, "Songti SC", serif; }.count-card small { display: block; margin-top: 9px; color: #dce5ff; font-size: .86rem; }.calendar-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }.calendar-item { display: grid; grid-template-columns: 90px 1fr auto; gap: 13px; align-items: center; padding: 14px 0; border-bottom: 1px solid #fff3ca1f; }.calendar-item:last-child { border-bottom: 0; }.calendar-date { color: #ffd991; font: 1rem Georgia, serif; }.calendar-item strong { display: block; margin-bottom: 4px; }.calendar-item p { margin: 0; color: #dce5ff; font-size: .88rem; line-height: 1.55; }.calendar-kind { color: #ffced2; font-size: .78rem; }.calendar-toolbar { display: flex; gap: 12px; align-items: center; justify-content: space-between; margin-top: 22px; }.calendar-action, .calendar-delete { border: 1px solid #ffe4ad8c; border-radius: 999px; color: #ffe4ad; background: transparent; cursor: pointer; }.calendar-action { padding: 10px 15px; }.calendar-delete { padding: 6px 10px; color: #ffcbd1; border-color: #ffcbd16e; font-size: .8rem; }.calendar-action:hover, .calendar-delete:hover { background: #ffffff14; }.calendar-status { margin: 0; color: #dce5ff; font-size: .84rem; }.calendar-form { display: none; grid-template-columns: 1fr 150px; gap: 12px; margin-top: 18px; padding-top: 20px; border-top: 1px solid #fff3ca2b; }.calendar-form.show { display: grid; }.calendar-form label { display: grid; gap: 7px; color: #ffe4ad; font-size: .84rem; }.calendar-form input, .calendar-form textarea { width: 100%; padding: 10px 12px; color: #372c3b; border: 0; border-radius: 10px; background: #fff8e9; font: inherit; }.calendar-form textarea { min-height: 82px; resize: vertical; }.calendar-form .note-field { grid-column: 1 / -1; }.calendar-form .save-event { justify-self: start; padding: 10px 16px; border: 0; border-radius: 999px; background: #ffe4ad; color: #442c35; cursor: pointer; font-weight: 700; }
     .spark-toast { position: fixed; z-index: 8; left: 50%; bottom: 28px; max-width: calc(100% - 36px); padding: 13px 19px; border-radius: 999px; background: #fff4dc; color: #513642; box-shadow: 0 12px 34px #0006; transform: translate(-50%, 100px); opacity: 0; transition: .3s; }.spark-toast.show { transform: translate(-50%, 0); opacity: 1; }
     .stars { position: absolute; top: 115px; left: 8%; color: #ffe6a4; opacity: .6; letter-spacing: .45rem; animation: twinkle 3s ease-in-out infinite alternate; }
     .orb { position: absolute; border-radius: 999px; filter: blur(1px); opacity: .42; }
@@ -53,14 +54,14 @@
     .close { position: absolute; top: 13px; right: 18px; border: 0; background: none; color: #795967; cursor: pointer; font-size: 2rem; }
     @keyframes appear { from { opacity: 0; transform: translateY(12px) rotate(-1deg); } to { opacity: 1; transform: none; } }
     @keyframes twinkle { to { opacity: 1; transform: translateY(-4px); } }
-    @media (max-width: 720px) { .topbar { padding: 20px; } .date { display: none; } .hero { grid-template-columns: 1fr; min-height: auto; padding: 48px 22px 70px; gap: 45px; } .art-wrap { max-width: 500px; } .art-note { right: -6px; bottom: -22px; font-size: .9rem; } .love-note { margin: 0 20px 30px; padding: 22px; grid-template-columns: auto 1fr; } .next-reason { grid-column: 2; justify-self: start; } .note-mark { font-size: 3.2rem; } .letter { padding: 42px 28px 30px; }.moments, .wish-section { padding-left: 22px; padding-right: 22px; }.moment-grid { grid-template-columns: 1fr; }.wish-section { grid-template-columns: 1fr; padding-bottom: 42px; }.section-title { font-size: 1.9rem; } }
+    @media (max-width: 720px) { .topbar { padding: 20px; } .date { display: none; } .hero { grid-template-columns: 1fr; min-height: auto; padding: 48px 22px 70px; gap: 45px; } .art-wrap { max-width: 500px; } .art-note { right: -6px; bottom: -22px; font-size: .9rem; } .love-note { margin: 0 20px 30px; padding: 22px; grid-template-columns: auto 1fr; } .next-reason { grid-column: 2; justify-self: start; } .note-mark { font-size: 3.2rem; } .letter { padding: 42px 28px 30px; }.moments, .wish-section, .calendar { padding-left: 22px; padding-right: 22px; }.moment-grid { grid-template-columns: 1fr; }.wish-section { grid-template-columns: 1fr; padding-bottom: 42px; }.section-title { font-size: 1.9rem; }.calendar-shell { padding: 21px; }.calendar-head, .calendar-toolbar { align-items: flex-start; flex-direction: column; }.count-grid, .calendar-form { grid-template-columns: 1fr; }.calendar-item { grid-template-columns: 76px 1fr; }.calendar-kind, .calendar-delete { justify-self: start; }.calendar-item .calendar-delete { grid-column: 2; }.calendar-form .note-field { grid-column: auto; } }
   </style>
 </head>
 <body>
   <main class="love-page">
     <div class="orb orb-one"></div><div class="orb orb-two"></div>
     <div class="stars" aria-hidden="true">✦　·　✧　·　✦　　✧　·　✦</div>
-    <nav class="topbar"><p class="brand">♥ 给王振华</p><a href="/memories.html" style="color:#ffe0a1;text-decoration:none">我们的心动收藏 →</a></nav>
+    <nav class="topbar"><p class="brand">♥ 给王振华</p><p class="date">一封只属于你的情书</p></nav>
     <section class="hero">
       <div class="copy"><p class="eyebrow">✦ FROM MY HEART</p><h1>王振华，<br>我想一直陪着你。</h1><p class="lead">不是一时兴起的喜欢，是每次想起你，心里都会亮起一盏小灯。</p><button class="letter-button" type="button">✦ 打开这封信</button></div>
       <div class="art-wrap"><img src="/love-letter-hero.png" alt="星空下的信封与鲜花"><div class="art-note">愿我们把日子过成<br><strong>很多很多个小幸福</strong></div></div>
@@ -68,6 +69,7 @@
     <section class="love-note" aria-labelledby="note-title"><div class="note-mark">♡</div><div><p class="eyebrow">A LITTLE REMINDER</p><h2 id="note-title">喜欢你的理由，今天是第 <span id="reason-number">1</span> 条</h2><p class="reason" id="reason-text">因为有你，普通的一天也会变得闪闪发亮。</p></div><button class="next-reason" type="button" aria-label="换一句喜欢你的理由">换一句 <span>→</span></button></section>
     <section class="moments" aria-labelledby="moments-title"><p class="section-label">OUR LITTLE CONSTELLATION</p><h2 class="section-title" id="moments-title">把喜欢藏进每一个小瞬间</h2><div class="moment-grid"><button class="moment" type="button" data-message="你不需要做什么特别的事，光是做你自己，就已经很值得被喜欢。"><span class="moment-icon">☾</span><strong>晚安的小事</strong><small>愿你每晚都带着安心入睡，醒来时也有好心情。</small></button><button class="moment" type="button" data-message="以后不管遇到什么，我都希望自己能成为那个认真听你说话、陪你笑的人。"><span class="moment-icon">✦</span><strong>想和你分享</strong><small>开心、烦恼、路边的云，甚至一句没头没尾的话。</small></button><button class="moment" type="button" data-message="这不是一个需要完成的约定，而是我想慢慢做到的事：对你好，也好好爱你。"><span class="moment-icon">♡</span><strong>慢慢靠近</strong><small>不用着急，我们有很多时间把平凡过得很甜。</small></button></div></section>
     <section class="wish-section" aria-labelledby="wish-title"><div><p class="section-label">A TINY SURPRISE</p><h2 class="section-title" id="wish-title">今天也想送你一句话</h2><div class="wish-box"><p id="wish-text">愿你今天的所有小期待，都有温柔的回应。</p><span>点击右边，换一颗新的小星星。</span></div></div><button class="wish-button" type="button" id="wish-button">收下一颗星 ✦</button></section>
+    <section class="calendar" aria-labelledby="calendar-title"><div class="calendar-shell"><div class="calendar-head"><div><p class="section-label">OUR LITTLE CALENDAR</p><h2 class="section-title" id="calendar-title">我们的时间，正在慢慢变长</h2></div><p class="calendar-tag">初识：2025-02-14<br>在一起：2025-02-20</p></div><div class="count-grid"><div class="count-card"><span>已经在一起</span><strong id="days-together">—</strong><small>每一天都值得被好好记住。</small></div><div class="count-card"><span>距离下一次纪念日</span><strong id="days-to-anniversary">—</strong><small id="anniversary-date">正在计算…</small></div></div><ul class="calendar-list" id="calendar-events" aria-live="polite"></ul><div class="calendar-toolbar"><button class="calendar-action" id="calendar-edit" type="button">一起添加恋爱日程</button><p class="calendar-status" id="calendar-status" aria-live="polite">正在加载我们的小日程…</p></div><form class="calendar-form" id="calendar-form"><label>日程名称<input id="event-title" name="title" maxlength="60" required placeholder="例如：一起看电影"></label><label>日期<input id="event-date" name="eventDate" type="date" required></label><label class="note-field">想写的一句话<textarea id="event-note" name="note" maxlength="200" placeholder="可选，写下这个日子的小期待。"></textarea></label><button class="save-event" type="submit">把这一天收进日历</button></form></div></section>
   </main>
   <template id="letter-template"><div class="modal-backdrop" role="presentation"><section class="letter" role="dialog" aria-modal="true" aria-labelledby="letter-title"><button class="close" type="button" aria-label="关闭信件">×</button><p class="eyebrow">TO WANG ZHENHUA</p><h2 id="letter-title">亲爱的王振华：</h2><p>谢谢你来到我的生活里。和你在一起之后，我开始更期待每一个明天，也更珍惜那些平凡的小事。</p><p>我希望你开心的时候有人分享，难过的时候有人陪伴；希望以后每一次回头，都能看到我在你身边。</p><p class="signature">我喜欢你。<br>也想和你慢慢来，慢慢爱。<br><span>♡</span></p></section></div></template>
   <script>
@@ -94,7 +96,174 @@
       const showToast = message => { toast.textContent = '✦ ' + message; toast.classList.add('show'); window.setTimeout(() => toast.classList.remove('show'), 3200); };
       document.querySelectorAll('.moment').forEach(card => card.addEventListener('click', () => showToast(card.dataset.message)));
       document.querySelector('#wish-button').addEventListener('click', () => { wishIndex = (wishIndex + 1) % wishes.length; document.querySelector('#wish-text').textContent = wishes[wishIndex]; showToast('这一颗星，也想落在你的心上。'); });
+
+      const CALENDAR_API = 'https://love-letter-for-wang.copper-lynx-4878.chatgpt.site/api/calendar';
+      const CACHE_KEY = 'love-calendar-events-v1';
+      const calendarList = document.querySelector('#calendar-events');
+      const calendarStatus = document.querySelector('#calendar-status');
+      const calendarForm = document.querySelector('#calendar-form');
+      const calendarEdit = document.querySelector('#calendar-edit');
+      let editKey = '';
+      let customEvents = readCachedEvents();
+
+      const toUtcDate = value => new Date(Date.UTC(value.getFullYear(), value.getMonth(), value.getDate()));
+      const asIsoDate = value => value.toISOString().slice(0, 10);
+      const dayDistance = (from, to) => Math.max(0, Math.round((toUtcDate(to) - toUtcDate(from)) / 86400000));
+      const monthDay = value => new Intl.DateTimeFormat('zh-CN', { month: 'long', day: 'numeric' }).format(value);
+
+      function nextDate(month, day) {
+        const now = new Date();
+        const candidate = new Date(now.getFullYear(), month - 1, day);
+        return toUtcDate(candidate) >= toUtcDate(now) ? candidate : new Date(now.getFullYear() + 1, month - 1, day);
+      }
+
+      function renderTime() {
+        const today = new Date();
+        const start = new Date(2025, 1, 20);
+        const anniversary = nextDate(2, 20);
+        document.querySelector('#days-together').textContent = `${dayDistance(start, today)} 天`;
+        document.querySelector('#days-to-anniversary').textContent = `${dayDistance(today, anniversary)} 天`;
+        document.querySelector('#anniversary-date').textContent = `下一次是 ${monthDay(anniversary)}`;
+      }
+
+      function builtInEvents() {
+        return [
+          { title: '情人节 · 初识的日子', eventDate: asIsoDate(nextDate(2, 14)), note: '2025 年 2 月 14 日，我们在情人节认识。', kind: '特别纪念' },
+          { title: '恋爱纪念日', eventDate: asIsoDate(nextDate(2, 20)), note: '2025 年 2 月 20 日，我们正式在一起。', kind: '特别纪念' },
+          { title: '520', eventDate: asIsoDate(nextDate(5, 20)), note: '把喜欢大大方方说出来的一天。', kind: '情侣节日' },
+          { title: '七夕', eventDate: '', note: '每年农历七月初七，也想和你一起过。', kind: '情侣节日' },
+          { title: '圣诞节', eventDate: asIsoDate(nextDate(12, 25)), note: '冬天也要有一起期待的温暖。', kind: '情侣节日' },
+        ];
+      }
+
+      function renderCalendar() {
+        const events = [...builtInEvents(), ...customEvents.map(event => ({ ...event, kind: '我们添加的日程' }))]
+          .sort((left, right) => (left.eventDate || '9999-12-31').localeCompare(right.eventDate || '9999-12-31'));
+        calendarList.replaceChildren(...events.map(event => makeCalendarItem(event)));
+      }
+
+      function makeCalendarItem(event) {
+        const item = document.createElement('li');
+        item.className = 'calendar-item';
+        const date = document.createElement('span');
+        date.className = 'calendar-date';
+        date.textContent = event.eventDate ? monthDay(new Date(`${event.eventDate}T00:00:00`)) : '农历七夕';
+        const copy = document.createElement('div');
+        const title = document.createElement('strong');
+        title.textContent = event.title;
+        const note = document.createElement('p');
+        note.textContent = event.note || '留一份只属于我们的期待。';
+        const kind = document.createElement('span');
+        kind.className = 'calendar-kind';
+        kind.textContent = event.kind;
+        copy.append(title, note, kind);
+        item.append(date, copy);
+        if (event.id) {
+          const remove = document.createElement('button');
+          remove.className = 'calendar-delete';
+          remove.type = 'button';
+          remove.textContent = '删除';
+          remove.addEventListener('click', () => deleteEvent(event.id));
+          item.append(remove);
+        }
+        return item;
+      }
+
+      function readCachedEvents() {
+        try {
+          const cached = JSON.parse(localStorage.getItem(CACHE_KEY));
+          return Array.isArray(cached) ? cached : [];
+        } catch {
+          return [];
+        }
+      }
+
+      async function loadEvents() {
+        const controller = new AbortController();
+        const timer = window.setTimeout(() => controller.abort(), 5000);
+        try {
+          const response = await fetch(CALENDAR_API, { signal: controller.signal });
+          const payload = await response.json();
+          if (!response.ok || !Array.isArray(payload.events)) throw new Error('calendar unavailable');
+          customEvents = payload.events;
+          localStorage.setItem(CACHE_KEY, JSON.stringify(customEvents));
+          calendarStatus.textContent = customEvents.length ? '你们一起写下的日程，已同步。' : '日程本准备好了，等你们写下新的期待。';
+        } catch {
+          calendarStatus.textContent = customEvents.length ? '网络暂时不稳定，正在展示上次保存的日程。' : '网络暂时不稳定，纪念日和节日仍会在这里陪着你们。';
+        } finally {
+          window.clearTimeout(timer);
+          renderCalendar();
+        }
+      }
+
+      function requestEditKey() {
+        const value = window.prompt('输入你们私下保存的编辑口令，就可以一起添加日程。');
+        if (!value) return false;
+        editKey = value;
+        calendarForm.classList.add('show');
+        calendarEdit.textContent = '收起添加日程';
+        calendarStatus.textContent = '编辑口令仅保留在这次打开的页面中。';
+        return true;
+      }
+
+      calendarEdit.addEventListener('click', () => {
+        if (!editKey) {
+          requestEditKey();
+          return;
+        }
+        const isOpen = calendarForm.classList.toggle('show');
+        calendarEdit.textContent = isOpen ? '收起添加日程' : '一起添加恋爱日程';
+      });
+
+      calendarForm.addEventListener('submit', async event => {
+        event.preventDefault();
+        if (!editKey && !requestEditKey()) return;
+        const formData = new FormData(calendarForm);
+        try {
+          const response = await fetch(CALENDAR_API, {
+            method: 'POST',
+            headers: { 'content-type': 'application/json', 'x-calendar-edit-key': editKey },
+            body: JSON.stringify({ title: formData.get('title'), eventDate: formData.get('eventDate'), note: formData.get('note') }),
+          });
+          const payload = await response.json();
+          if (!response.ok) {
+            calendarStatus.textContent = payload.error || '这次没有保存成功，请稍后再试。';
+            return;
+          }
+          customEvents.push(payload.event);
+          localStorage.setItem(CACHE_KEY, JSON.stringify(customEvents));
+          calendarForm.reset();
+          calendarStatus.textContent = '这一天已经被好好收进你们的日历。';
+          showToast('新的期待，已经写进我们的时间里。');
+          renderCalendar();
+        } catch {
+          calendarStatus.textContent = '网络暂时不稳定，这次还没有保存成功。';
+        }
+      });
+
+      async function deleteEvent(id) {
+        if (!editKey && !requestEditKey()) return;
+        try {
+          const response = await fetch(`${CALENDAR_API}?id=${encodeURIComponent(id)}`, { method: 'DELETE', headers: { 'x-calendar-edit-key': editKey } });
+          if (!response.ok) {
+            calendarStatus.textContent = '暂时无法删除这条日程，请检查编辑口令后再试。';
+            return;
+          }
+          customEvents = customEvents.filter(event => event.id !== id);
+          localStorage.setItem(CACHE_KEY, JSON.stringify(customEvents));
+          calendarStatus.textContent = '这条日程已经从日历里轻轻拿走。';
+          renderCalendar();
+        } catch {
+          calendarStatus.textContent = '暂时无法删除这条日程，请检查编辑口令后再试。';
+        }
+      }
+
+      renderTime();
+      renderCalendar();
+      loadEvents();
     })();
   </script>
 </body>
 </html>
+
+
