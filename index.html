@@ -180,21 +180,26 @@
       }
 
       async function loadEvents() {
-        const controller = new AbortController();
-        const timer = window.setTimeout(() => controller.abort(), 5000);
-        try {
-          const response = await fetch(`${CALENDAR_API}?t=${Date.now()}`, { cache: 'no-store', signal: controller.signal });
-          const payload = await response.json();
-          if (!response.ok || !Array.isArray(payload.events)) throw new Error('calendar unavailable');
-          customEvents = payload.events;
-          localStorage.setItem(CACHE_KEY, JSON.stringify(customEvents));
-          calendarStatus.textContent = customEvents.length ? '你们一起写下的日程，已同步。' : '日程本准备好了，等你们写下新的期待。';
-        } catch {
-          calendarStatus.textContent = customEvents.length ? '网络暂时不稳定，正在展示上次保存的日程。' : '网络暂时不稳定，纪念日和节日仍会在这里陪着你们。';
-        } finally {
-          window.clearTimeout(timer);
-          renderCalendar();
+        for (let attempt = 0; attempt < 3; attempt += 1) {
+          const controller = new AbortController();
+          const timer = window.setTimeout(() => controller.abort(), 12000);
+          try {
+            const response = await fetch(`${CALENDAR_API}?t=${Date.now()}`, { cache: 'no-store', signal: controller.signal });
+            const payload = await response.json();
+            if (!response.ok || !Array.isArray(payload.events)) throw new Error('calendar unavailable');
+            customEvents = payload.events;
+            localStorage.setItem(CACHE_KEY, JSON.stringify(customEvents));
+            calendarStatus.textContent = customEvents.length ? '你们一起写下的日程，已同步。' : '日程本准备好了，等你们写下新的期待。';
+            window.clearTimeout(timer);
+            renderCalendar();
+            return;
+          } catch {
+            window.clearTimeout(timer);
+            if (attempt < 2) await new Promise(resolve => window.setTimeout(resolve, 700 * (attempt + 1)));
+          }
         }
+        calendarStatus.textContent = customEvents.length ? '网络暂时不稳定，正在展示上次保存的日程。' : '网络暂时不稳定，纪念日和节日仍会在这里陪着你们。';
+        renderCalendar();
       }
 
       function requestEditKey() {
