@@ -14,7 +14,8 @@
     .topbar, .hero, .love-note { position: relative; z-index: 1; max-width: 1120px; margin: auto; }
     .topbar { display: flex; align-items: center; justify-content: space-between; padding: 26px 32px; font-size: .88rem; letter-spacing: .08em; }
     .brand { margin: 0; display: flex; align-items: center; gap: 8px; font-weight: 700; color: #ffe6b2; }
-    .date { opacity: .7; margin: 0; }
+    .date { opacity: .82; margin: 0; color: #ffe6b2; text-decoration: none; transition: opacity .2s, transform .2s; }
+    .date:hover, .date:focus-visible { opacity: 1; transform: translateY(-1px); text-decoration: underline; }
     .hero { min-height: 560px; padding: 60px 32px 90px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 64px; }
     .eyebrow { margin: 0 0 16px; display: flex; align-items: center; gap: 7px; font-size: .74rem; font-weight: 700; letter-spacing: .18em; color: var(--gold); }
     h1 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: clamp(3.1rem, 6.2vw, 5.8rem); font-weight: 500; line-height: 1.12; letter-spacing: -.04em; }
@@ -54,20 +55,20 @@
     .close { position: absolute; top: 13px; right: 18px; border: 0; background: none; color: #795967; cursor: pointer; font-size: 2rem; }
     @keyframes appear { from { opacity: 0; transform: translateY(12px) rotate(-1deg); } to { opacity: 1; transform: none; } }
     @keyframes twinkle { to { opacity: 1; transform: translateY(-4px); } }
-    @media (max-width: 720px) { .topbar { padding: 20px; } .date { display: none; } .hero { grid-template-columns: 1fr; min-height: auto; padding: 48px 22px 70px; gap: 45px; } .art-wrap { max-width: 500px; } .art-note { right: -6px; bottom: -22px; font-size: .9rem; } .love-note { margin: 0 20px 30px; padding: 22px; grid-template-columns: auto 1fr; } .next-reason { grid-column: 2; justify-self: start; } .note-mark { font-size: 3.2rem; } .letter { padding: 42px 28px 30px; }.moments, .wish-section, .calendar { padding-left: 22px; padding-right: 22px; }.moment-grid { grid-template-columns: 1fr; }.wish-section { grid-template-columns: 1fr; padding-bottom: 42px; }.section-title { font-size: 1.9rem; }.calendar-shell { padding: 21px; }.calendar-head, .calendar-toolbar { align-items: flex-start; flex-direction: column; }.count-grid, .calendar-form { grid-template-columns: 1fr; }.calendar-item { grid-template-columns: 76px 1fr; }.calendar-kind, .calendar-delete { justify-self: start; }.calendar-item .calendar-delete { grid-column: 2; }.calendar-form .note-field { grid-column: auto; } }
+    @media (max-width: 720px) { .topbar { padding: 20px; } .date { display: inline-block; font-size: .73rem; letter-spacing: .03em; } .hero { grid-template-columns: 1fr; min-height: auto; padding: 48px 22px 70px; gap: 45px; } .art-wrap { max-width: 500px; } .art-note { right: -6px; bottom: -22px; font-size: .9rem; } .love-note { margin: 0 20px 30px; padding: 22px; grid-template-columns: auto 1fr; } .next-reason { grid-column: 2; justify-self: start; } .note-mark { font-size: 3.2rem; } .letter { padding: 42px 28px 30px; }.moments, .wish-section, .calendar { padding-left: 22px; padding-right: 22px; }.moment-grid { grid-template-columns: 1fr; }.wish-section { grid-template-columns: 1fr; padding-bottom: 42px; }.section-title { font-size: 1.9rem; }.calendar-shell { padding: 21px; }.calendar-head, .calendar-toolbar { align-items: flex-start; flex-direction: column; }.count-grid, .calendar-form { grid-template-columns: 1fr; }.calendar-item { grid-template-columns: 76px 1fr; }.calendar-kind, .calendar-delete { justify-self: start; }.calendar-item .calendar-delete { grid-column: 2; }.calendar-form .note-field { grid-column: auto; } }
   </style>
 </head>
 <body>
   <main class="love-page">
     <div class="orb orb-one"></div><div class="orb orb-two"></div>
     <div class="stars" aria-hidden="true">✦　·　✧　·　✦　　✧　·　✦</div>
-    <nav class="topbar"><p class="brand">♥ 给王振华</p><p class="date">一封只属于你的情书</p></nav>
+    <nav class="topbar"><p class="brand">♥ 给王振华</p><a class="date" href="#moments">我们的心动收藏 →</a></nav>
     <section class="hero">
       <div class="copy"><p class="eyebrow">✦ FROM MY HEART</p><h1>王振华，<br>我想一直陪着你。</h1><p class="lead">不是一时兴起的喜欢，是每次想起你，心里都会亮起一盏小灯。</p><button class="letter-button" type="button">✦ 打开这封信</button></div>
       <div class="art-wrap"><img src="/love-letter-hero.png" alt="星空下的信封与鲜花"><div class="art-note">愿我们把日子过成<br><strong>很多很多个小幸福</strong></div></div>
     </section>
     <section class="love-note" aria-labelledby="note-title"><div class="note-mark">♡</div><div><p class="eyebrow">A LITTLE REMINDER</p><h2 id="note-title">喜欢你的理由，今天是第 <span id="reason-number">1</span> 条</h2><p class="reason" id="reason-text">因为有你，普通的一天也会变得闪闪发亮。</p></div><button class="next-reason" type="button" aria-label="换一句喜欢你的理由">换一句 <span>→</span></button></section>
-    <section class="moments" aria-labelledby="moments-title"><p class="section-label">OUR LITTLE CONSTELLATION</p><h2 class="section-title" id="moments-title">把喜欢藏进每一个小瞬间</h2><div class="moment-grid"><button class="moment" type="button" data-message="你不需要做什么特别的事，光是做你自己，就已经很值得被喜欢。"><span class="moment-icon">☾</span><strong>晚安的小事</strong><small>愿你每晚都带着安心入睡，醒来时也有好心情。</small></button><button class="moment" type="button" data-message="以后不管遇到什么，我都希望自己能成为那个认真听你说话、陪你笑的人。"><span class="moment-icon">✦</span><strong>想和你分享</strong><small>开心、烦恼、路边的云，甚至一句没头没尾的话。</small></button><button class="moment" type="button" data-message="这不是一个需要完成的约定，而是我想慢慢做到的事：对你好，也好好爱你。"><span class="moment-icon">♡</span><strong>慢慢靠近</strong><small>不用着急，我们有很多时间把平凡过得很甜。</small></button></div></section>
+    <section class="moments" id="moments" aria-labelledby="moments-title"><p class="section-label">OUR LITTLE CONSTELLATION · 心动收藏</p><h2 class="section-title" id="moments-title">把喜欢藏进每一个小瞬间</h2><div class="moment-grid"><button class="moment" type="button" data-message="你不需要做什么特别的事，光是做你自己，就已经很值得被喜欢。"><span class="moment-icon">☾</span><strong>晚安的小事</strong><small>愿你每晚都带着安心入睡，醒来时也有好心情。</small></button><button class="moment" type="button" data-message="以后不管遇到什么，我都希望自己能成为那个认真听你说话、陪你笑的人。"><span class="moment-icon">✦</span><strong>想和你分享</strong><small>开心、烦恼、路边的云，甚至一句没头没尾的话。</small></button><button class="moment" type="button" data-message="这不是一个需要完成的约定，而是我想慢慢做到的事：对你好，也好好爱你。"><span class="moment-icon">♡</span><strong>慢慢靠近</strong><small>不用着急，我们有很多时间把平凡过得很甜。</small></button></div></section>
     <section class="wish-section" aria-labelledby="wish-title"><div><p class="section-label">A TINY SURPRISE</p><h2 class="section-title" id="wish-title">今天也想送你一句话</h2><div class="wish-box"><p id="wish-text">愿你今天的所有小期待，都有温柔的回应。</p><span>点击右边，换一颗新的小星星。</span></div></div><button class="wish-button" type="button" id="wish-button">收下一颗星 ✦</button></section>
     <section class="calendar" aria-labelledby="calendar-title"><div class="calendar-shell"><div class="calendar-head"><div><p class="section-label">OUR LITTLE CALENDAR</p><h2 class="section-title" id="calendar-title">我们的时间，正在慢慢变长</h2></div><p class="calendar-tag">初识：2025-02-14<br>在一起：2025-02-20</p></div><div class="count-grid"><div class="count-card"><span>已经在一起</span><strong id="days-together">—</strong><small>每一天都值得被好好记住。</small></div><div class="count-card"><span>距离下一次纪念日</span><strong id="days-to-anniversary">—</strong><small id="anniversary-date">正在计算…</small></div></div><ul class="calendar-list" id="calendar-events" aria-live="polite"></ul><div class="calendar-toolbar"><button class="calendar-action" id="calendar-edit" type="button">一起添加恋爱日程</button><p class="calendar-status" id="calendar-status" aria-live="polite">正在加载我们的小日程…</p></div><form class="calendar-form" id="calendar-form"><label>日程名称<input id="event-title" name="title" maxlength="60" required placeholder="例如：一起看电影"></label><label>日期<input id="event-date" name="eventDate" type="date" required></label><label class="note-field">想写的一句话<textarea id="event-note" name="note" maxlength="200" placeholder="可选，写下这个日子的小期待。"></textarea></label><button class="save-event" type="submit">把这一天收进日历</button></form></div></section>
   </main>
@@ -265,5 +266,6 @@
   </script>
 </body>
 </html>
+
 
 
